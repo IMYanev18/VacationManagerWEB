@@ -52,8 +52,7 @@ public class IndexController {
 
 
 
-        User user_inserted = userrepo.save(user);
-        model.addAttribute("message", user_inserted.getNickname() + "inserted.");
+
 
         return "registerPage";
     }

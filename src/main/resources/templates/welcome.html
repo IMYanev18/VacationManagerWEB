@@ -1,16 +1,30 @@
 <!DOCTYPE html>
-<html xmlns:th="https://www.thymeleaf.org">
+<html lang="en">
 <head>
-  <meta charset="ISO-8859-1">
-  <title>welcome</title>
+  <link href="css/main.css" rel="stylesheet" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name = "description" content = "">
+
+  <title>Vacation Manager</title>
 </head>
 <body>
 
-<h1> Welcome page</h1>
+<header>
+  <h1 class="logo">Vacation Management</h1>
+  <nav>
+    <ul class="nav__links">
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Projects</a></li>
+      <li><a href="#">View Team</a></li>
+    </ul>
+  </nav>
+  <a clas="navButton" href="#"><button>Request vacation</button></a>
+</header>
 
-<h2> Welcome user</h2>
 
-<h2 th:text="${message}">first name</h2>
+<hr>
+
+<h1 class ="greetingMessage" th:text="${message}">Welcome</h1>
 
 </body>
 </html>

@@ -35,7 +35,7 @@ public class IndexController {
 
 
        User user_inserted = userrepo.save(user);
-       model.addAttribute("message", user_inserted.getNickname() + "inserted.");
+       model.addAttribute("message", "Welcome " + user_inserted.getNickname()+ "!");
 
         return "welcome";
     }

@@ -29,13 +29,16 @@
     <input id="password" type="password" name="passwd" required/> <br/>
 
     <label for="role">Enter Your Role: </label>
-    <input id="role" type="text" name="role" required/> <br/>
-
-    <label for="role">Enter Your Team: </label>
-    <input id="team" type="text" name="team" required/> <br/>
+    <select name="role" id="role" required>
+      <option value=""></option>
+      <option value="developer">Developer</option>
+      <option value="unassigned">Unassigned</option>
+    </select>
 
     <br/>
-    <button type="submit">Submit</button>
+    <br/>
+    <br/>
+    <button class="button" type="submit">Submit</button>
   </form>
   <br/>
 </div>

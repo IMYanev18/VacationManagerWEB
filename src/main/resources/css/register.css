@@ -64,6 +64,16 @@ input[type="submit"] {
     background-color: #3b3b4f;
     border-color: white;
     min-width: 300px;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
 }
 
 input[type="file"] {
@@ -72,5 +82,25 @@ input[type="file"] {
 
 a {
     color: #dfdfe2;
+}
+
+button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+div{
+    width: 300px;
+    border: 15px solid green;
+    padding: 50px;
+    margin: 20px;
 }
 

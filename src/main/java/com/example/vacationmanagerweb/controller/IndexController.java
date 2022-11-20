@@ -24,15 +24,6 @@ public class IndexController {
 
     @PostMapping("/register")
     public String userRegistration(@ModelAttribute User user, Model model) {
-        System.out.println(user.toString());
-        // validate
-        System.out.println(user.getFname());
-        System.out.println(user.getLname());
-        System.out.println(user.getRole());
-        System.out.println(user.getNickname());
-        System.out.println(user.getTeam());
-
-
 
        User user_inserted = userrepo.save(user);
        model.addAttribute("message", "Welcome " + user_inserted.getNickname()+ "!");
@@ -42,18 +33,19 @@ public class IndexController {
 
     @PostMapping("/gotoregister")
     public String goToRegister(@ModelAttribute User user, Model model) {
-        System.out.println(user.toString());
-        // validate
-        System.out.println(user.getFname());
-        System.out.println(user.getLname());
-        System.out.println(user.getRole());
-        System.out.println(user.getNickname());
-        System.out.println(user.getTeam());
-
-
-
-
 
         return "registerPage";
+    }
+
+    @GetMapping("/noAccountError")
+    public String noAccountError(@ModelAttribute User user, Model model) {
+
+        return "noAccountError";
+    }
+
+    @PostMapping("/returnToWelcome")
+    public String returnToWelcome(@ModelAttribute User user, Model model) {
+
+        return "welcome";
     }
 }

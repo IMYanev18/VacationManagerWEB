@@ -5,6 +5,11 @@ body{
     background-size: 100% 100%;
 }
 
+.accountButtons{
+    padding: 100px 100px;
+    margin: 100px 100px;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -30,6 +35,14 @@ header{
     cursor: pointer;
     margin-right: auto;
     color: white;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+.mainlogo{
+    cursor: pointer;
+    margin: auto;
+    color: white;
+    font-size: 70px;
     font-family: 'Trebuchet MS', sans-serif;
 }
 

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="css/devPage.css" rel="stylesheet" type="text/css">
+    <title>Title</title>
+</head>
+<body>
+<header>
+    <h1 class="logo">Vacation Management</h1>
+    <nav>
+        <ul class="nav__links">
+            <li><a href="#">Create a Team</a></li>
+            <li><a href="#">Join Team</a></li>
+            <li><a href="/noAccountError">View Team</a></li>
+        </ul>
+    </nav>
+    <a clas="navButton" href="/noAccountError"><button>Request vacation</button></a>
+</header>
+
+
+<hr>
+
+<h1 class ="greetingMessage" th:text="${getLoggedUser}">Welcome</h1>
+
+
+</body>
+</html>

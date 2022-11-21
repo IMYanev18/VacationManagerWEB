@@ -19,7 +19,7 @@ button{
     padding: 40px 100px;
     background-color: rgba(3, 190, 238, 0.8);
     border:none;
-    border-radius: 50px;
+    border-radius: 20px;
     cursor: pointer;
     transition: all 0.3s ease 0s;
 }

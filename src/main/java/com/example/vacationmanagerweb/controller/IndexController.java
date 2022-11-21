@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 public class IndexController {
 
     @Autowired
-    private UserRepository userrepo;
+    UserRepository userRepo;
 
     @GetMapping("/")
     public String index() {
@@ -25,10 +25,8 @@ public class IndexController {
     @PostMapping("/register")
     public String userRegistration(@ModelAttribute User user, Model model) {
 
-       User user_inserted = userrepo.save(user);
-       model.addAttribute("message", "Welcome " + user_inserted.getNickname()+ "!");
-
-        return "welcome";
+       userRepo.save(user);
+        return "index";
     }
 
     @PostMapping("/gotoregister")
@@ -48,4 +46,23 @@ public class IndexController {
 
         return "welcome";
     }
+
+
+    @GetMapping("/gotologin")
+    public String goToLogin(@ModelAttribute User user, Model model) {
+
+        return "login";
+    }
+
+    @GetMapping(value="/login")
+    public String getUserByUsernameAndPassword(@ModelAttribute User user, Model model) {
+        User loggedUser = userRepo.findByNicknameAndPasswd(user.getNickname(), user.getPasswd());
+        model.addAttribute("getLoggedUser", loggedUser);
+
+         if(loggedUser.getRole().contains("developer")) {
+            return "developerPage";
+        }
+        return "welcome";
+    }
+
 }
